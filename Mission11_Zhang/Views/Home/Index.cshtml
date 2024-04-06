@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@* @model BookstoreListViewModel
+ *@
+@model IOrderedQueryable<Book>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Online Bookstore</h1>
+</div>
+
+<div class="container">
+
+	@foreach (Book b in Model)
+	{
+		<ul>
+			<li>Title: @b.Title</li>
+			<li>Author: @b.Author</li>
+			<li>Publisher: @b.Publisher</li>
+			<li>ISBN: @b.ISBN</li>
+			<li>Classification/Category: @b.Classification/@b.Category</li>
+			<li>Number of Pages: @b.PageCount</li>
+			<li>Price: @b.Price</li>
+		</ul>
+	}
+		@* @foreach (Book b in Model.Books)
+		{
+			<ul>
+				<li>Title: @b.Title</li>
+				<li>Author: @b.Author</li>
+				<li>Publisher: @b.Publisher</li>
+				<li>ISBN: @b.ISBN</li>
+				<li>Classification/Category: @b.Classification/@b.Category</li>
+				<li>Number of Pages: @b.PageCount</li>
+				<li>Price: @b.Price</li>
+			</ul>
+		} *@
+<div />
+
+@* <div page-model="@Model.paginataionInfo" page-action="Index"></div> *@
